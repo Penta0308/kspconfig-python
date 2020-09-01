@@ -1,5 +1,5 @@
-def loadl(s):
-    dic = {}
+def loadl(s: list):
+    dic = dict()
     i = 0
     c = 0
     n = 0
@@ -25,3 +25,28 @@ def loadl(s):
 def loads(ln: str):
     s = ln.split("\n")
     return loadl(s)
+
+
+def dumps(ln: dict):
+    r = _rdumps(ln)
+    c = 0
+    for i in range(len(r)):
+        if "}" in r[i]:
+            c -= 1
+        r[i] = "    " * c + r[i]
+        if "{" in r[i]:
+            c += 1
+    return '\n'.join(r)
+
+def _rdumps(ln: dict):
+    s = []
+    for k, v in ln.items():
+        if str(type(v)) == str(type([])):
+            s.append(k)
+            s.append("{")
+            for t in v:
+                s += _rdumps(t)
+            s.append("}")
+        else:
+            s.append(k + " = " + v)
+    return s
