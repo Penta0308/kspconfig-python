@@ -1,31 +1,27 @@
-class Node(object):
-    def __init__(self,name):
-        self.name = name
-
-    def __str__(self):
-        return self.name
-
-    def __repr__(self):
-        return "'"+self.name+"'"
-
-
-def loads(l: str):
-    s = l.split()
+def loadl(s):
     dic = {}
+    i = 0
     c = 0
-
-    for i in range(len(s)):
-        if s[i].strip() == "{":
+    n = 0
+    while i < len(s):
+        if "{" in s[i]:
+            if c == 0:
+                n = i
             c += 1
-            for j in range(i + 1, len(s)):
-                if s[i].strip() == "{":
-                    c += 1
-                elif s[i].strip() == "}":
-                    c -= 1
-                if c == 0:
-                    dic[s[i - 1].strip()] = loads('\n'.join(s[i:j]))
-                    break
-        elif "=" in s[i] and c == 0:
+        elif "}" in s[i]:
+            c -= 1
+            if c == 0:
+                u = s[n - 1].strip()
+                print(u)
+                if dic.get(u) is None:
+                    dic[u] = []
+                dic[u].append(loadl(s[n + 1 : i - 1]))
+        elif ("=" in s[i]) and c == 0:
             d = s[i].split("=")
             dic[d[0].strip()] = d[1].strip()
+        i += 1
     return dic
+
+def loads(ln: str):
+    s = ln.split("\n")
+    return loadl(s)
