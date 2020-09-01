@@ -3,7 +3,7 @@ import json
 
 
 def test_smoke_test():
-    d = open("Penta6A5J.craft")
+    d = open("tests/Penta6A5J.craft")
     f = kspconfig.loadl(d.readlines())
     print(f)
     assert f["ship"] == "Penta6A5J", "Name"
