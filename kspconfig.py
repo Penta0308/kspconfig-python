@@ -1,9 +1,9 @@
-def loadl(s: list):
-    dic = dict()
+def loadl(s: list) -> dict:
+    dic = {}
     i = 0
     c = 0
     n = 0
-    while i < len(s):
+    for x in range(len(s)):
         if "{" in s[i]:
             if c == 0:
                 n = i
@@ -22,12 +22,12 @@ def loadl(s: list):
     return dic
 
 
-def loads(ln: str):
+def loads(ln: str) -> dict:
     s = ln.split("\n")
     return loadl(s)
 
 
-def dumpl(ln: dict):
+def dumpl(ln: dict) -> list:
     r = _rdumps(ln)
     c = 0
     for i in range(len(r)):
@@ -38,8 +38,10 @@ def dumpl(ln: dict):
             c += 1
     return r
 
-def dumps(ln:dict):
+
+def dumps(ln: dict) -> str:
     return '\n'.join(dumpl(ln))
+
 
 def _rdumps(ln: dict):
     s = []

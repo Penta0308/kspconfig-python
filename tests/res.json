@@ -1,0 +1,254 @@
+{
+    "ship": "Penta6A5J",
+    "version": "1.8.1",
+    "description": "",
+    "type": "SPH",
+    "size": "10.4780569,7.53453445,9.49736786",
+    "steamPublishedFileId": "0",
+    "persistentId": "2723705039",
+    "rot": "0,0,0,0",
+    "missionFlag": "Squad/Flags/default",
+    "vesselType": "Plane",
+    "OverrideDefault": "False,False,False,False",
+    "OverrideActionControl": "0,0,0,0",
+    "OverrideAxisControl": "0,0,0,0",
+    "OverrideGroupNames": ",,,",
+    "PART": [
+        {
+            "part": "probeCoreCube_4294484300",
+            "partName": "Part",
+            "persistentId": "2278809690",
+            "pos": "0,10,0",
+            "attPos": "0,0,0",
+            "attPos0": "0,10,0",
+            "rot": "0.707106829,0,0,0.707106829",
+            "attRot": "0,0,0,1",
+            "attRot0": "0.707106769,0,0,0.707106769",
+            "mir": "1,1,1",
+            "symMethod": "Mirror",
+            "autostrutMode": "Heaviest",
+            "rigidAttachment": "False",
+            "istg": "-1",
+            "resPri": "0",
+            "dstg": "0",
+            "sidx": "-1",
+            "sqor": "-1",
+            "sepI": "-1",
+            "attm": "0",
+            "sameVesselCollision": "False",
+            "modCost": "0",
+            "modMass": "0",
+            "modSize": "0,0,0",
+            "link": "BDAcUniversalAmmoBox_4286771216",
+            "attN": "top,mk2CargoBayS_4294374318_0|0.284596711|0_0|1|0_0|0.284596711|0_0|1|0",
+            "EVENTS": [
+                {}
+            ],
+            "ACTIONS": [
+                {
+                    "ToggleSameVesselInteraction": [
+                        {}
+                    ],
+                    "SetSameVesselInteraction": [
+                        {}
+                    ]
+                }
+            ],
+            "PARTDATA": [
+                {}
+            ],
+            "MODULE": [
+                {
+                    "name": "ModuleCommand",
+                    "isEnabled": "True",
+                    "hibernation": "False",
+                    "hibernateOnWarp": "False",
+                    "activeControlPointName": "_default",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {
+                            "MakeReferenceToggle": [
+                                {}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ModuleSAS",
+                    "isEnabled": "True",
+                    "standaloneToggle": "True",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ]
+                },
+                {
+                    "name": "ModuleKerbNetAccess",
+                    "isEnabled": "True",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ]
+                },
+                {
+                    "name": "ModuleDataTransmitter",
+                    "isEnabled": "True",
+                    "xmitIncomplete": "False",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ]
+                },
+                {
+                    "name": "HitpointTracker",
+                    "isEnabled": "True",
+                    "Armor": "10",
+                    "maxHitPoints": "0",
+                    "ArmorThickness": "0",
+                    "ArmorSet": "True",
+                    "ExplodeMode": "Never",
+                    "FireFX": "True",
+                    "FireFXLifeTimeInSeconds": "5",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ]
+                },
+                {
+                    "name": "TweakScale",
+                    "isEnabled": "True",
+                    "currentScale": "100",
+                    "defaultScale": "100",
+                    "defaultTransformScale": "(0, 0, 0)",
+                    "DryCost": "360",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ]
+                },
+                {
+                    "name": "ModuleTripLogger",
+                    "isEnabled": "True",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {}
+                    ],
+                    "Log": [
+                        {}
+                    ]
+                }
+            ],
+            "RESOURCE": [
+                {
+                    "name": "ElectricCharge",
+                    "amount": "5",
+                    "maxAmount": "5",
+                    "flowState": "True",
+                    "isTweakable": "True",
+                    "hideFlow": "False",
+                    "isVisible": "True"
+                }
+            ]
+        },
+        {
+            "part": "bdPilotAI_4294438596",
+            "partName": "Part",
+            "persistentId": "660238032",
+            "pos": "-1.96059755E-08,10.2449627,-0.000191479921",
+            "attPos": "0,0,0",
+            "attPos0": "-1.96059755E-08,-0.000191509724,-0.244962722",
+            "rot": "0,1.00000012,1.1920929E-07,0",
+            "attRot": "0,0,0,1",
+            "attRot0": "0,0.707106888,-0.707106769,0",
+            "mir": "1,1,1",
+            "symMethod": "Mirror",
+            "autostrutMode": "Off",
+            "rigidAttachment": "False",
+            "istg": "-1",
+            "resPri": "0",
+            "dstg": "0",
+            "sidx": "-1",
+            "sqor": "-1",
+            "sepI": "-1",
+            "attm": "1",
+            "sameVesselCollision": "False",
+            "modCost": "0",
+            "modMass": "0",
+            "modSize": "0,0,0",
+            "srfN": "srfAttach,probeCoreCube_4294484300,cube_Collider,0|-0.0206965208|0,0|-1|0,0|-0.0206965208|0",
+            "EVENTS": [
+                {}
+            ],
+            "ACTIONS": [
+                {
+                    "ToggleSameVesselInteraction": [
+                        {}
+                    ],
+                    "SetSameVesselInteraction": [
+                        {}
+                    ]
+                }
+            ],
+            "PARTDATA": [
+                {}
+            ],
+            "MODULE": [
+                {
+                    "name": "BDModulePilotAI",
+                    "isEnabled": "True",
+                    "defaultAltitude": "2000",
+                    "minAltitude": "1000",
+                    "steerMult": "6",
+                    "steerKiAdjust": "0.0500000007",
+                    "maxSteer": "1",
+                    "steerDamping": "3",
+                    "maxSpeed": "800",
+                    "takeOffSpeed": "25",
+                    "minSpeed": "45",
+                    "idleSpeed": "100",
+                    "maxAllowedGForce": "45",
+                    "maxAllowedAoA": "60",
+                    "ClockwiseOrbit": "True",
+                    "UpToEleven": "False",
+                    "standbyMode": "False",
+                    "pilotOn": "False",
+                    "stagingEnabled": "True",
+                    "EVENTS": [
+                        {}
+                    ],
+                    "ACTIONS": [
+                        {
+                            "AGActivatePilot": [
+                                {}
+                            ],
+                            "AGDeactivatePilot": [
+                                {}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
