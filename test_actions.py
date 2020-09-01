@@ -9,7 +9,7 @@ def test_smoke_test():
     assert f["ship"] == "Penta6A5J", "Name"
     assert f["PART"][1]["part"] == "bdPilotAI_4294438596", "Part"
     d.close()
-    with open("tests/res2.json", "w") as a:
+    with open("tests/res3.json", "w") as a:
         json.dump(f, a, indent=4)
 
 test_smoke_test()

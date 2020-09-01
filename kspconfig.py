@@ -1,9 +1,8 @@
 def loadl(s: list) -> dict:
     dic = {}
-    i = 0
     c = 0
     n = 0
-    for x in range(len(s)):
+    for i in range(len(s)):
         if "{" in s[i]:
             if c == 0:
                 n = i
