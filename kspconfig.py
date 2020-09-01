@@ -27,7 +27,7 @@ def loads(ln: str):
     return loadl(s)
 
 
-def dumps(ln: dict):
+def dumpl(ln: dict):
     r = _rdumps(ln)
     c = 0
     for i in range(len(r)):
@@ -36,7 +36,10 @@ def dumps(ln: dict):
         r[i] = "    " * c + r[i]
         if "{" in r[i]:
             c += 1
-    return '\n'.join(r)
+    return r
+
+def dumps(ln:dict):
+    return '\n'.join(dumpl(ln))
 
 def _rdumps(ln: dict):
     s = []
