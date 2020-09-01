@@ -14,12 +14,13 @@ def loadl(s):
                 u = s[n - 1].strip()
                 if dic.get(u) is None:
                     dic[u] = []
-                dic[u].append(loadl(s[n + 1 : i - 1]))
+                dic[u].append(loadl(s[n + 1:i - 1]))
         elif ("=" in s[i]) and c == 0:
             d = s[i].split("=")
             dic[d[0].strip()] = d[1].strip()
         i += 1
     return dic
+
 
 def loads(ln: str):
     s = ln.split("\n")
