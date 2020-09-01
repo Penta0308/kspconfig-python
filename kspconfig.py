@@ -12,7 +12,6 @@ def loadl(s):
             c -= 1
             if c == 0:
                 u = s[n - 1].strip()
-                print(u)
                 if dic.get(u) is None:
                     dic[u] = []
                 dic[u].append(loadl(s[n + 1 : i - 1]))
