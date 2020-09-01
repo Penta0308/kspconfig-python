@@ -1,4 +1,8 @@
 def loadl(s: list) -> dict:
+    """
+    :param s: 줄들을 받아옵니다
+    :return: dict 타입으로 재귀적으로 노드륿 돌려줍니다. PART{} PART{} 같이 같은 노드가 여러 개 있을 경우 Key로 PART, 값으로 [{},{}]을 담아 줍니다.
+    """
     dic = {}
     c = 0
     n = 0
@@ -22,11 +26,19 @@ def loadl(s: list) -> dict:
 
 
 def loads(ln: str) -> dict:
+    """
+    :param ln: 줄들을 받아옵니다
+    :return: dict 타입으로 재귀적으로 노드륿 돌려줍니다. PART{} PART{} 같이 같은 노드가 여러 개 있을 경우 Key로 PART, 값으로 [{},{}]을 담아 줍니다.
+    """
     s = ln.split("\n")
     return loadl(s)
 
 
 def dumpl(ln: dict) -> list:
+    """
+    :param ln: 재귀적으로 구성된 노드를 받아옵니다
+    :return: 다시 KSP 파일 형식으로 구성해서 예쁘게 들여쓴 후 줄별 list로 돌려줍니다
+    """
     r = _rdumps(ln)
     c = 0
     for i in range(len(r)):
@@ -39,10 +51,18 @@ def dumpl(ln: dict) -> list:
 
 
 def dumps(ln: dict) -> str:
+    """
+    :param ln: 재귀적으로 구성된 노드를 받아옵니다
+    :return: 다시 KSP 파일 형식으로 구성해서 예쁘게 들여쓴 후 str로 돌려줍니다
+    """
     return '\n'.join(dumpl(ln))
 
 
 def _rdumps(ln: dict):
+    """
+    :param ln: 재귀적으로 구성된 노드를 받아옵니다
+    :return: 다시 KSP 파일 형식으로 구성해서 들여쓰지 않고 줄별 list로 돌려줍니다
+    """
     s = []
     for k, v in ln.items():
         if str(type(v)) == str(type([])):
