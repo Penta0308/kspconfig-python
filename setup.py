@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="kspconfig-penta", # Replace with your own username
+    name="kspconfig", # Replace with your own username
     version="1.1",
     author="Penta0308",
     author_email="kevin03088@naver.com",
