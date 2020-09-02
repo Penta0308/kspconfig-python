@@ -16,13 +16,13 @@ ap = 0.0
 
 c = kspconfig.loadl(b.readlines())
 
+err = []
+
 for d in c["PART"]:
     e = '_'.join(d["part"].split("_")[:-1])
     print(e)
     if e in blacklist:
-        print("Blacklisted")
-        print("FAIL")
-        sys.exit(0)
+        err.append("Blacklisted Part: " + e)
     f = armpoint.get(e)
     if f is not None:
         ap += f
@@ -34,13 +34,13 @@ for d in c["PART"]:
     if e in armor2:
         i = 2
     if g > i:
-        print("Armor")
-        print("FAIL")
-        sys.exit(0)
-if ap <= 15.1:
+        err.append("Armor Thickness is changed: " + e)
+if ap > 15.1:
+    err.append("Armpoint exceeded: " + str(ap))
+
+if len(err) == 0:
     print("OK")
-    sys.exit(0)
 else:
-    print("Armpoint exceeded")
-    print("FAIL")
-    sys.exit(0)
+    for e in err:
+          print(e)
+    print("Failed")
