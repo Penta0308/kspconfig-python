@@ -1,4 +1,4 @@
-import kspconfig
+from kspconfig import kspconfig
 import json
 
 
