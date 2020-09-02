@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kspconfig-penta", # Replace with your own username
-    version="0.0.1",
+    version="1.1",
     author="Penta0308",
     author_email="kevin03088@naver.com",
     description="Kerbal Space Program Craft and Cfg Loader",
