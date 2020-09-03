@@ -1,5 +1,7 @@
 # kspconfig-python
 
+![Python package](https://github.com/Penta0308/kspconfig-python/workflows/Python%20package/badge.svg?branch=master)
+
  * loadl(list) : 줄 list를 받아 dict를 출력한다
  * loads(str) : 엔터로 묶인 줄 뭉치를 받아 dict를 출력한다
  * dumpl(dict): 위의 출력을 받아 예쁘게 들여써진 줄 list를 출력한다
