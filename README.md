@@ -7,3 +7,4 @@
  * \_rdump(dict) : 위의 출력을 받아 들여써지지 않은 줄 list를 출력한다
 
 ![Python package](https://github.com/Penta0308/kspconfig-python/workflows/Python%20package/badge.svg?branch=master)
+[![CodeFactor](https://www.codefactor.io/repository/github/penta0308/kspconfig-python/badge)](https://www.codefactor.io/repository/github/penta0308/kspconfig-python)
