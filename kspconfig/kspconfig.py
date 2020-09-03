@@ -14,10 +14,11 @@ def loadl(s: list) -> dict:
         elif "}" in s[i]:
             c -= 1
             if c == 0:
-                u = s[n - 1].strip()
-                if dic.get(u) is None:
-                    dic[u] = []
-                dic[u].append(loadl(s[n + 1:i - 1]))
+                if n > 0:
+                    u = s[n - 1].strip()
+                    if dic.get(u) is None:
+                        dic[u] = []
+                    dic[u].append(loadl(s[n + 1:i - 1]))
         elif ("=" in s[i]) and c == 0:
             d = s[i].split("=")
             dic[d[0].strip()] = d[1].strip()
