@@ -26,7 +26,7 @@ def loadl(s: list) -> dict:
     return dic
 
 
-def loads(ln: str) -> dict:
+def load(ln: str) -> dict:
     """
     :param ln: 줄들을 받아옵니다
     :return: dict 타입으로 재귀적으로 노드륿 돌려줍니다. PART{} PART{} 같이 같은 노드가 여러 개 있을 경우 Key로 PART, 값으로 [{},{}]을 담아 줍니다.
@@ -51,7 +51,7 @@ def dumpl(ln: dict) -> list:
     return r
 
 
-def dumps(ln: dict) -> str:
+def dump(ln: dict) -> str:
     """
     :param ln: 재귀적으로 구성된 노드를 받아옵니다
     :return: 다시 KSP 파일 형식으로 구성해서 예쁘게 들여쓴 후 str로 돌려줍니다
